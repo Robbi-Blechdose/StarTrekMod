@@ -1,5 +1,6 @@
-package StarTrekMod;
+package StarTrekMod.Item;
 
+import StarTrekMod.StarTrekModBase;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
@@ -12,10 +13,10 @@ public class TShirts extends ItemArmor{
 
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
 	{
-		if(stack.getItem() == StarTrekModBase.YellowTShirt){
+		if(stack.getItem() == StarTrekModBase.commanduniform){
 			return "startrekmod:textures/armor/yellowtshirt_layer_1.png";
 		}
-		else if(stack.getItem() == StarTrekModBase.BlueTShirt){
+		else if(stack.getItem() == StarTrekModBase.scienceuniform){
 			return "startrekmod:textures/armor/bluetshirt_layer_1.png";
 		}
 		else

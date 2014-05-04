@@ -1,4 +1,4 @@
-package StarTrekMod;
+package StarTrekMod.Proxys;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
