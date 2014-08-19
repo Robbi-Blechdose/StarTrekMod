@@ -23,5 +23,10 @@ public class StarTrekRecipes {
 																				 "BBB",
 																				 "BBB",
 					'B', new ItemStack(Blocks.wool, 1, 3), 'L', StarTrekModBase.logo);
+		
+		GameRegistry.addRecipe(new ItemStack(StarTrekModBase.dilithium_circuit, 1), "GIG",
+																					"GDG",
+																					"GIG",
+		'D', StarTrekModBase.dilithium_crystal, 'G', Blocks.glass, 'I', Items.iron_ingot);
 	}
 }

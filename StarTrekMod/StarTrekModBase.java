@@ -1,7 +1,7 @@
 package StarTrekMod;
 
+import StarTrekMod.Block.BaseBlock;
 import StarTrekMod.Entity.EntityTribble;
-import StarTrekMod.Item.BaseBlock;
 import StarTrekMod.Item.BaseItem;
 import StarTrekMod.Item.ProtectiveSuits;
 import StarTrekMod.Item.TShirts;
@@ -44,6 +44,7 @@ public class StarTrekModBase{
 	public static Item black_boots;
 	public static Item dilithium_crystal;
 	public static Block dilithium_ore;
+	public static Item dilithium_circuit;
 	
 	//Armor Materials
 	public static ArmorMaterial uniform = EnumHelper.addArmorMaterial("uniform", 99999, new int[]{0, 0, 0, 0}, 0);
@@ -70,6 +71,7 @@ public class StarTrekModBase{
 		
 		dilithium_crystal = new BaseItem().setTextureName("startrekmod:dilithium_crystal").setUnlocalizedName("dilithium_crystal").setCreativeTab(startrektab);
 		dilithium_ore = new BaseBlock(Material.rock).setBlockTextureName("startrekmod:dilithium_ore").setBlockName("dilithium_ore");
+		dilithium_circuit = new BaseItem().setTextureName("startrekmod:dilithium_circuit").setUnlocalizedName("dilithium_circuit").setCreativeTab(startrektab);
 		
 		int entityID;
         entityID = EntityRegistry.findGlobalUniqueEntityId();
@@ -88,6 +90,7 @@ public class StarTrekModBase{
 		GameRegistry.registerItem(black_boots, "black_boots");
 		GameRegistry.registerItem(dilithium_crystal, "dithium_crystal");
 		GameRegistry.registerBlock(dilithium_ore, "dithium_ore");
+		GameRegistry.registerItem(dilithium_circuit, "dilithium_circuit");
 		
 		proxy.registerRenderThings();
 	}
