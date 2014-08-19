@@ -19,6 +19,9 @@ public class TShirts extends ItemArmor{
 		else if(stack.getItem() == StarTrekModBase.scienceuniform){
 			return "startrekmod:textures/armor/bluetshirt_layer_1.png";
 		}
+		else if(stack.getItem() == StarTrekModBase.black_boots){
+			return "startrekmod:textures/armor/black_boots_layer_1.png";
+		}
 		else
 		return null;
 	}
