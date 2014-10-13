@@ -28,5 +28,19 @@ public class StarTrekRecipes {
 																					"GDG",
 																					"GIG",
 		'D', StarTrekModBase.dilithium_crystal, 'G', Blocks.glass, 'I', Items.iron_ingot);
+		
+		GameRegistry.addRecipe(new ItemStack(StarTrekModBase.engineeringuniform, 1), "RXL",
+				 																	 "RRR",
+				 																	 "RRR",
+				 		'R', new ItemStack(Blocks.wool, 1, 14), 'L', StarTrekModBase.logo);
+		
+		GameRegistry.addRecipe(new ItemStack(StarTrekModBase.black_leggins, 1), "BBB",
+																				"BXB",
+																				"BXB",
+												'B', new ItemStack(Blocks.wool, 1, 8));
+		GameRegistry.addRecipe(new ItemStack(StarTrekModBase.black_boots, 1), "XXX",
+																				"BXB",
+																				"BXB",
+											'B', new ItemStack(Blocks.wool, 1, 8));
 	}
 }

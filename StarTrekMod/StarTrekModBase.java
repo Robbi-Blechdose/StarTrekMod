@@ -45,6 +45,8 @@ public class StarTrekModBase{
 	public static Item dilithium_crystal;
 	public static Block dilithium_ore;
 	public static Item dilithium_circuit;
+	public static Item engineeringuniform;
+	public static Item black_leggins;
 	
 	//Armor Materials
 	public static ArmorMaterial uniform = EnumHelper.addArmorMaterial("uniform", 99999, new int[]{0, 0, 0, 0}, 0);
@@ -59,6 +61,7 @@ public class StarTrekModBase{
 	{
 		commanduniform = new TShirts(uniform, proxy.addArmor("commanduniform"), 1).setCreativeTab(startrektab).setTextureName("startrekmod:yellowtshirt").setUnlocalizedName("commanduniform");
 		scienceuniform = new TShirts(uniform, proxy.addArmor("scienceuniform"), 1).setCreativeTab(startrektab).setTextureName("startrekmod:bluetshirt").setUnlocalizedName("scienceuniform");
+		engineeringuniform = new TShirts(uniform, proxy.addArmor("engineeringuniform"), 1).setCreativeTab(startrektab).setTextureName("startrekmod:redtshirt").setUnlocalizedName("engineeringuniform");
 		
 		protectivehelmet = new ProtectiveSuits(protectivesuits, proxy.addArmor("protective"), 0).setCreativeTab(startrektab).setTextureName("startrekmod:protectivehelmet").setUnlocalizedName("protectivehelmet");
 		protectivechest = new ProtectiveSuits(protectivesuits, proxy.addArmor("protective"), 1).setCreativeTab(startrektab).setTextureName("startrekmod:protectivechest").setUnlocalizedName("protectivechest");
@@ -68,6 +71,7 @@ public class StarTrekModBase{
 		logo = new BaseItem().setTextureName("startrekmod:logo").setUnlocalizedName("logo");
 		
 		black_boots = new TShirts(uniform, proxy.addArmor("black_boots"), 3).setCreativeTab(startrektab).setTextureName("startrekmod:black_boots").setUnlocalizedName("black_boots");
+		black_leggins = new TShirts(uniform, proxy.addArmor("black_leggins"), 2).setCreativeTab(startrektab).setTextureName("startrekmod:black_leggins").setUnlocalizedName("black_leggins");
 		
 		dilithium_crystal = new BaseItem().setTextureName("startrekmod:dilithium_crystal").setUnlocalizedName("dilithium_crystal").setCreativeTab(startrektab);
 		dilithium_ore = new BaseBlock(Material.rock).setBlockTextureName("startrekmod:dilithium_ore").setBlockName("dilithium_ore");
@@ -88,9 +92,11 @@ public class StarTrekModBase{
 		GameRegistry.registerItem(protectiveboots, "protectiveboots");
 		GameRegistry.registerItem(logo, "logo");
 		GameRegistry.registerItem(black_boots, "black_boots");
+		GameRegistry.registerItem(black_leggins, "black_leggins");
 		GameRegistry.registerItem(dilithium_crystal, "dithium_crystal");
 		GameRegistry.registerBlock(dilithium_ore, "dithium_ore");
 		GameRegistry.registerItem(dilithium_circuit, "dilithium_circuit");
+		GameRegistry.registerItem(engineeringuniform, "engineeringuniform");
 		
 		proxy.registerRenderThings();
 	}

@@ -13,14 +13,25 @@ public class TShirts extends ItemArmor{
 
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
 	{
-		if(stack.getItem() == StarTrekModBase.commanduniform){
+		if(stack.getItem() == StarTrekModBase.commanduniform)
+		{
 			return "startrekmod:textures/armor/yellowtshirt_layer_1.png";
 		}
-		else if(stack.getItem() == StarTrekModBase.scienceuniform){
+		else if(stack.getItem() == StarTrekModBase.scienceuniform)
+		{
 			return "startrekmod:textures/armor/bluetshirt_layer_1.png";
 		}
-		else if(stack.getItem() == StarTrekModBase.black_boots){
+		else if(stack.getItem() == StarTrekModBase.black_boots)
+		{
 			return "startrekmod:textures/armor/black_boots_layer_1.png";
+		}
+		else if(stack.getItem() == StarTrekModBase.engineeringuniform)
+		{
+			return "startrekmod:textures/armor/redtshirt_layer_1.png";
+		}
+		else if(stack.getItem() == StarTrekModBase.black_leggins)
+		{
+			return "startrekmod:textures/armor/black_leggins_layer_2.png";
 		}
 		else
 		return null;
