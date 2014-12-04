@@ -4,7 +4,8 @@ import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class StarTrekCommonProxy {
 
-	public void registerRenderThings(){
+	public void registerRenderThings()
+	{
 		
 	}
 

@@ -8,6 +8,7 @@ import StarTrekMod.Item.BaseItem;
 import StarTrekMod.Item.ProtectiveSuits;
 import StarTrekMod.Item.TShirts;
 import StarTrekMod.Proxys.StarTrekCommonProxy;
+import StarTrekMod.TileEntity.BlockDeflector3x3;
 
 public class StarTrekModInit
 {
@@ -36,6 +37,7 @@ public class StarTrekModInit
 		StarTrekModBase.dilithium_crystal = new BaseItem().setTextureName("startrekmod:dilithium_crystal").setUnlocalizedName("dilithium_crystal").setCreativeTab(startrektab);
 		StarTrekModBase.dilithium_ore = new OreBlock(Material.rock).setHardness(2.0F).setBlockTextureName("startrekmod:dilithium_ore").setBlockName("dilithium_ore");
 		StarTrekModBase.dilithium_circuit = new BaseItem().setTextureName("startrekmod:dilithium_circuit").setUnlocalizedName("dilithium_circuit").setCreativeTab(startrektab);
-		
+	
+		StarTrekModBase.Deflector3x3 = new BlockDeflector3x3().setBlockName("Deflector3x3").setHardness(1.2F);
 	}
 }

@@ -47,6 +47,7 @@ public class StarTrekModBase{
 	public static Item dilithium_circuit;
 	public static Item engineeringuniform;
 	public static Item black_leggins;
+	public static Block Deflector3x3;
 	
 	//Armor Materials
 	public static ArmorMaterial uniform = EnumHelper.addArmorMaterial("uniform", 99999, new int[]{0, 0, 0, 0}, 0);

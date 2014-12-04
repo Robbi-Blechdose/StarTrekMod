@@ -12,6 +12,6 @@ public class StarTrekTab extends CreativeTabs{
 
 	@Override
 	public Item getTabIconItem(){
-		return StarTrekModBase.scienceuniform;
+		return StarTrekModBase.commanduniform;
 	}
 }

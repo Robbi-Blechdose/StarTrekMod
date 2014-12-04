@@ -23,5 +23,6 @@ public class StarTrekRegistry
 	public static void registerBlocks()
 	{
 		GameRegistry.registerBlock(StarTrekModBase.dilithium_ore, "dithium_ore");
+		GameRegistry.registerBlock(StarTrekModBase.Deflector3x3, "Deflector3x3");
 	}
 }
