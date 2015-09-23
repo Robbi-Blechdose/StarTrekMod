@@ -1,0 +1,4 @@
+{
+   "tribble_hurt": {"category": "master","sounds": [{"name": "tribble_hurt","stream": false}]},
+   "tribble_say": {"category": "master","sounds": [{"name": "tribble_say","stream": false}]}
+}
