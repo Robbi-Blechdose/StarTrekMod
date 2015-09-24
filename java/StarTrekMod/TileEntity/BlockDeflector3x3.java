@@ -17,7 +17,7 @@ public class BlockDeflector3x3 extends BlockContainer
 	public BlockDeflector3x3()
 	{
 		super(Material.iron);
-        this.setCreativeTab(StarTrekModBase.startrektab);
+        this.setCreativeTab(StarTrekModBase.startrektab_ships);
         this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
 	}
 	

@@ -1,21 +1,12 @@
 package StarTrekMod;
 
-import StarTrekMod.Block.BaseBlock;
+import StarTrekMod.CreativeTabs.StarTrekTab;
+import StarTrekMod.CreativeTabs.StarTrekTabPlanets;
+import StarTrekMod.CreativeTabs.StarTrekTabShips;
 import StarTrekMod.Dimensions.Space.SpaceBiome;
 import StarTrekMod.Dimensions.Space.SpaceWorldProvider;
 import StarTrekMod.Entity.EntityTribble;
-import StarTrekMod.Item.BaseItem;
-import StarTrekMod.Item.ProtectiveSuits;
-import StarTrekMod.Item.TShirts;
 import StarTrekMod.Proxys.StarTrekCommonProxy;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.EntityList;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor.ArmorMaterial;
-import net.minecraftforge.common.DimensionManager;
-import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -24,9 +15,15 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.EntityRegistry;
-import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityList;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraftforge.common.DimensionManager;
+import net.minecraftforge.common.util.EnumHelper;
 
-@Mod(modid = "startrekmod", name = "Star Trek Mod", version = "0.0.1")
+@Mod(modid = Reference.MODID, name = Reference.MODNAME, version = Reference.MODVERSION)
 public class StarTrekModBase
 {
 	
@@ -64,8 +61,11 @@ public class StarTrekModBase
 	public static ArmorMaterial uniform = EnumHelper.addArmorMaterial("uniform", 99999, new int[]{0, 0, 0, 0}, 0);
 	public static ArmorMaterial protectivesuits = EnumHelper.addArmorMaterial("protectivesuits", 500, new int[]{1, 1, 1, 1}, 0);
 	
-	//Creative Tab
+	//Creative Tabs
+	//TODO: Is this also possible with one class???
 	public static CreativeTabs startrektab = new StarTrekTab("StarTrekTab");
+	public static CreativeTabs startrektab_ships = new StarTrekTabShips("StarTrekTabShips");
+	public static CreativeTabs startrektab_planets = new StarTrekTabPlanets("StarTrekTabPlanets");
 	
 	/** Dimensions START **/
 	public static int SPACE_DIM_ID = 100;

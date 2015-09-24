@@ -1,5 +1,6 @@
 package StarTrekMod.Item;
 
+import StarTrekMod.Reference;
 import StarTrekMod.StarTrekModBase;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
@@ -14,13 +15,13 @@ public class ProtectiveSuits extends ItemArmor{
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
 	{
 		if(stack.getItem() == StarTrekModBase.protectivehelmet || stack.getItem() == StarTrekModBase.protectivechest || stack.getItem() == StarTrekModBase.protectiveboots){
-			return "startrekmod:textures/armor/protectivesuit_layer_1.png";
+			return Reference.MODID + ":textures/armor/protectivesuit_layer_1.png";
 		}
 		else if(stack.getItem() == StarTrekModBase.protectiveleggins)
 		{
-			return "startrekmod:textures/armor/protectivesuit_layer_2.png";
+			return Reference.MODID + ":textures/armor/protectivesuit_layer_2.png";
 		}
 		else
-		return "startrekmod:textures/armor/protectivesuit_layer_2.png";
+		return Reference.MODID + ":textures/armor/protectivesuit_layer_2.png";
 	}
 }

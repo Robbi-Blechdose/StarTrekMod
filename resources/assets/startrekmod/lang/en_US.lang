@@ -1,6 +1,8 @@
 item.commanduniform.name=Command Uniform
 item.scienceuniform.name=Science Uniform
-itemGroup.StarTrekTab=Star Trek
+itemGroup.StarTrekTab=Star Trek Mod
+itemGroup.StarTrekTabShips=Star Trek Mod Ship Blocks
+itemGroup.StarTrekTabPlanets=Star Trek Mod Planets
 item.protectivehelmet.name=Protective Helmet
 item.protectivechest.name=Protective Chestplate
 item.protectiveleggins.name=Protective Leggins

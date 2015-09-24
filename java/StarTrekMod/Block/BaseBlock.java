@@ -9,6 +9,6 @@ public class BaseBlock extends Block
 	public BaseBlock(Material mat)
 	{
 		super(mat);
-		setCreativeTab(StarTrekModBase.startrektab);
+		setCreativeTab(StarTrekModBase.startrektab_ships);
 	}
 }

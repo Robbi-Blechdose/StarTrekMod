@@ -12,6 +12,7 @@ public class OreBlock extends BaseBlock
 	public OreBlock(Material mat)
 	{
 		super(mat);
+		this.setCreativeTab(StarTrekModBase.startrektab_planets);
 	}
 	
 	public Item getItemDropped(int int1, Random rand, int int2)
