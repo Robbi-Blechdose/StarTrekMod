@@ -1,4 +1,4 @@
-package StarTrekMod.TileEntity;
+package StarTrekMod.TileEntity.Deflector;
 
 import StarTrekMod.StarTrekModBase;
 import net.minecraft.block.Block;

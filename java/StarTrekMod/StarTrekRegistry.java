@@ -18,6 +18,7 @@ public class StarTrekRegistry
 		GameRegistry.registerItem(StarTrekModBase.dilithium_crystal, "dithium_crystal");
 		GameRegistry.registerItem(StarTrekModBase.dilithium_circuit, "dilithium_circuit");
 		GameRegistry.registerItem(StarTrekModBase.engineeringuniform, "engineeringuniform");
+		GameRegistry.registerItem(StarTrekModBase.helm_panel, "helm_panel");
 	}
 	
 	public static void registerBlocks()
@@ -29,5 +30,6 @@ public class StarTrekRegistry
 		GameRegistry.registerBlock(StarTrekModBase.ship_block_marked_front, "ship_block_marked_front");
 		GameRegistry.registerBlock(StarTrekModBase.ship_block_marked_back, "ship_block_marked_back");
 		GameRegistry.registerBlock(StarTrekModBase.ship_block_window, "ship_block_window");
+		GameRegistry.registerBlock(StarTrekModBase.helm, "Helm");
 	}
 }

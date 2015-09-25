@@ -39,9 +39,8 @@ public class StarTrekRecipes {
 																				"BXB",
 												'B', new ItemStack(Blocks.wool, 1, 8));
 		
-		GameRegistry.addRecipe(new ItemStack(StarTrekModBase.black_boots, 1), "XXX",
-																				"BXB",
-																				"BXB",
+		GameRegistry.addRecipe(new ItemStack(StarTrekModBase.black_boots, 1), "BXB",
+																		 	  "BXB",
 											'B', new ItemStack(Blocks.wool, 1, 8));
 		
 		GameRegistry.addRecipe(new ItemStack(StarTrekModBase.ship_block, 8), "III",
@@ -60,5 +59,14 @@ public class StarTrekRecipes {
 
 		GameRegistry.addRecipe(new ItemStack(StarTrekModBase.ship_block_marked, 1), "B",
 				 						'B', StarTrekModBase.ship_block_marked_back);
+		
+		GameRegistry.addRecipe(new ItemStack(StarTrekModBase.helm, 1), "PPP",
+																	   "XBX",
+					'B', Blocks.iron_block, 'P', StarTrekModBase.helm_panel);
+		
+		GameRegistry.addRecipe(new ItemStack(StarTrekModBase.helm_panel, 1), "ILI",
+																	   "GRG",
+																	   "III",
+		'I', Items.iron_ingot, 'R', Blocks.redstone_block, 'L', Blocks.redstone_lamp, 'G', Items.gold_ingot);
 	}
 }

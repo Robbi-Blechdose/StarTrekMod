@@ -8,7 +8,8 @@ import StarTrekMod.Item.BaseItem;
 import StarTrekMod.Item.ProtectiveSuits;
 import StarTrekMod.Item.TShirts;
 import StarTrekMod.Proxys.StarTrekCommonProxy;
-import StarTrekMod.TileEntity.BlockDeflector3x3;
+import StarTrekMod.TileEntity.Deflector.BlockDeflector3x3;
+import StarTrekMod.TileEntity.Helm.BlockHelm;
 
 public class StarTrekModInit
 {
@@ -45,5 +46,8 @@ public class StarTrekModInit
 		StarTrekModBase.ship_block_marked_front = new BaseBlock(Material.iron).setBlockTextureName("startrekmod:ship_block_marked_yellow").setBlockName("ship_block_marked_front").setHardness(2.0f);
 		StarTrekModBase.ship_block_marked_back = new BaseBlock(Material.iron).setBlockTextureName("startrekmod:ship_block_marked_end").setBlockName("ship_block_marked_back").setHardness(2.0f);
 		StarTrekModBase.ship_block_window = new BaseBlock(Material.iron).setBlockTextureName("startrekmod:ship_block_window").setBlockName("ship_block_window").setHardness(2.0f).setLightLevel(0.4f);
+
+		StarTrekModBase.helm_panel = new BaseItem().setTextureName(Reference.MODID + ":helm_panel").setUnlocalizedName("helm_panel");
+		StarTrekModBase.helm = new BlockHelm().setBlockName("Helm").setHardness(1.0f);
 	}
 }

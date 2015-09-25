@@ -3,8 +3,8 @@ package StarTrekMod;
 import StarTrekMod.CreativeTabs.StarTrekTab;
 import StarTrekMod.CreativeTabs.StarTrekTabPlanets;
 import StarTrekMod.CreativeTabs.StarTrekTabShips;
-import StarTrekMod.Dimensions.Space.SpaceBiome;
-import StarTrekMod.Dimensions.Space.SpaceWorldProvider;
+import StarTrekMod.Dimensions.StarTrekBiomes;
+import StarTrekMod.Dimensions.StarTrekDimensions;
 import StarTrekMod.Entity.EntityTribble;
 import StarTrekMod.Proxys.StarTrekCommonProxy;
 import cpw.mods.fml.common.Mod;
@@ -20,6 +20,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityList;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.util.EnumHelper;
 
@@ -46,6 +47,7 @@ public class StarTrekModBase
 	public static Item dilithium_circuit;
 	public static Item engineeringuniform;
 	public static Item black_leggins;
+	public static Item helm_panel;
 	
 	//Blocks
 	public static Block dilithium_ore;
@@ -56,6 +58,7 @@ public class StarTrekModBase
 	//TODO: Use custom model to make them rotate right
 	public static Block ship_block_marked_front;
 	public static Block ship_block_marked_back;
+	public static Block helm;
 	
 	//Armor Materials
 	public static ArmorMaterial uniform = EnumHelper.addArmorMaterial("uniform", 99999, new int[]{0, 0, 0, 0}, 0);
@@ -70,7 +73,8 @@ public class StarTrekModBase
 	/** Dimensions START **/
 	public static int SPACE_DIM_ID = 100;
 	
-	public static SpaceBiome spaceBiome;
+	public static BiomeGenBase biomeSpace;
+	
 	/** Dimensions END **/
 	
 	//PreInit
@@ -84,9 +88,9 @@ public class StarTrekModBase
     	EntityRegistry.registerModEntity(EntityTribble.class, "Tribble", 600, this, 80, 3, true);
     	EntityList.addMapping(EntityTribble.class, "Tribble", 1200, 0x318A25, 0x26F50F);
     	
-		StarTrekRecipes.initCraftingRecipes();
 		StarTrekRegistry.registerItems();
 		StarTrekRegistry.registerBlocks();
+		StarTrekRecipes.initCraftingRecipes();
 		
 		createDimensions();
 		
@@ -107,11 +111,12 @@ public class StarTrekModBase
 				
 	}
 	
-	//Dimension stuff is mostly taken from my RobbiBlechdoseMod
 	private void createDimensions()
 	{
-		DimensionManager.registerProviderType(SPACE_DIM_ID, SpaceWorldProvider.class, true);
-		DimensionManager.registerDimension(SPACE_DIM_ID, SPACE_DIM_ID);
+		StarTrekBiomes.initBiomes();
+		StarTrekBiomes.registerBiomes();
+		
+		//StarTrekDimensions.registerDimensions();
 	}
 
 }

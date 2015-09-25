@@ -1,4 +1,4 @@
-package StarTrekMod.TileEntity;
+package StarTrekMod.TileEntity.Deflector;
 
 import org.lwjgl.opengl.GL11;
 

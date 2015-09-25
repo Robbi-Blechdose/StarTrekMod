@@ -1,50 +1,30 @@
 package StarTrekMod.Dimensions.Space;
 
+import StarTrekMod.Reference;
 import StarTrekMod.StarTrekModBase;
 import net.minecraft.world.WorldProvider;
+import net.minecraft.world.biome.WorldChunkManagerHell;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraftforge.common.DimensionManager;
 
 public class SpaceWorldProvider extends WorldProvider
 {
-	public SpaceWorldProvider()
-	{
-		
-	}
-	
 	@Override
 	public void registerWorldChunkManager()
 	{
-		this.worldChunkMgr = new SpaceWorldChunkManager(worldObj.getSeed(), terrainType);
-		this.hasNoSky = true;
-	}
-
-	@Override
-	public String getDimensionName()
-	{
-		return "StarTrekMod:Space"; //Add StarTrekMod to not have dim conflicts with other mods
-	}
-	
-	public static WorldProvider getProviderForDimension(int id)
-	{
-		return DimensionManager.createProviderFor(StarTrekModBase.SPACE_DIM_ID);
-	}
-	
-	@Override
-	public String getWelcomeMessage()
-	{
-		return "Entering Space"; //Is this still necessary?
+		//TODO: Should we create our own WorldChunkManager???
+		this.worldChunkMgr = new WorldChunkManagerHell(StarTrekModBase.biomeSpace, 0.0f);
+		this.dimensionId = StarTrekModBase.SPACE_DIM_ID;
 	}
 	
 	@Override
 	public IChunkProvider createChunkGenerator()
 	{
-		return new SpaceChunkProvider(worldObj, worldObj.getSeed(), true);
+		return null; //TODO: Should we create our own ChunkProvider?
 	}
 	
 	@Override
-	public boolean canRespawnHere()
+	public String getDimensionName()
 	{
-		return false; //Players shouldn't respawn in Space
+		return Reference.MODID + ": Space";
 	}
 }
