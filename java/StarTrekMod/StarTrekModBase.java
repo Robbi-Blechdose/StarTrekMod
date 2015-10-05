@@ -95,13 +95,15 @@ public class StarTrekModBase
 		createDimensions();
 		
 		proxy.registerRenderThings();
+		
+		netInit.init();
 	}
 	
 	//Init
 	@EventHandler
 	public void Init(FMLInitializationEvent event)
 	{
-			
+		NetworkRegistry.INSTANCE.registerGuiHandler(StarTrekModBase.instance, new GUIHandler());
 	}
 	
 	//PostInit
