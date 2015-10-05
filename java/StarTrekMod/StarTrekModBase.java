@@ -1,11 +1,19 @@
 package StarTrekMod;
 
+import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityList;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.util.EnumHelper;
 import StarTrekMod.CreativeTabs.StarTrekTab;
 import StarTrekMod.CreativeTabs.StarTrekTabPlanets;
 import StarTrekMod.CreativeTabs.StarTrekTabShips;
 import StarTrekMod.Dimensions.StarTrekBiomes;
-import StarTrekMod.Dimensions.StarTrekDimensions;
 import StarTrekMod.Entity.EntityTribble;
+import StarTrekMod.Gui.GuiHandler;
+import StarTrekMod.Network.NetInit;
 import StarTrekMod.Proxys.StarTrekCommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -14,15 +22,8 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.EntityList;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor.ArmorMaterial;
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraftforge.common.DimensionManager;
-import net.minecraftforge.common.util.EnumHelper;
 
 @Mod(modid = Reference.MODID, name = Reference.MODNAME, version = Reference.MODVERSION)
 public class StarTrekModBase
