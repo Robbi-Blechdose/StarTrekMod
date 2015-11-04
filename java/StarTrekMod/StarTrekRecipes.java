@@ -68,5 +68,7 @@ public class StarTrekRecipes {
 																	   "GRG",
 																	   "III",
 		'I', Items.iron_ingot, 'R', Blocks.redstone_block, 'L', Blocks.redstone_lamp, 'G', Items.gold_ingot);
+		
+		//TODO: Phaser recipe
 	}
 }

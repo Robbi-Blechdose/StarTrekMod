@@ -6,6 +6,7 @@ import StarTrekMod.CreativeTabs.StarTrekTabShips;
 import StarTrekMod.Dimensions.StarTrekBiomes;
 import StarTrekMod.Dimensions.StarTrekDimensions;
 import StarTrekMod.Entity.EntityTribble;
+import StarTrekMod.Item.Phaser.EntityPhaserBolt;
 import StarTrekMod.Proxys.StarTrekCommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -48,6 +49,7 @@ public class StarTrekModBase
 	public static Item engineeringuniform;
 	public static Item black_leggins;
 	public static Item helm_panel;
+	public static Item phaser;
 	
 	//Blocks
 	public static Block dilithium_ore;
@@ -62,7 +64,7 @@ public class StarTrekModBase
 	
 	//Armor Materials
 	public static ArmorMaterial uniform = EnumHelper.addArmorMaterial("uniform", 99999, new int[]{0, 0, 0, 0}, 0);
-	public static ArmorMaterial protectivesuits = EnumHelper.addArmorMaterial("protectivesuits", 500, new int[]{1, 1, 1, 1}, 0);
+	public static ArmorMaterial protectivesuits = EnumHelper.addArmorMaterial("protectivesuits", 500, new int[]{1, 2, 2, 1}, 0);
 	
 	//Creative Tabs
 	//TODO: Is this also possible with one class???
@@ -71,7 +73,7 @@ public class StarTrekModBase
 	public static CreativeTabs startrektab_planets = new StarTrekTabPlanets("StarTrekTabPlanets");
 	
 	/** Dimensions START **/
-	public static int SPACE_DIM_ID = 100;
+	public static final int SPACE_DIM_ID = 100;
 	
 	public static BiomeGenBase biomeSpace;
 	
@@ -83,16 +85,16 @@ public class StarTrekModBase
 	{	
 		StarTrekModInit.init(startrektab, proxy);
 		
-		int entityID;
-        entityID = EntityRegistry.findGlobalUniqueEntityId();
-    	EntityRegistry.registerModEntity(EntityTribble.class, "Tribble", 600, this, 80, 3, true);
-    	EntityList.addMapping(EntityTribble.class, "Tribble", 1200, 0x318A25, 0x26F50F);
+		StarTrekRegistry.registerEntities(this);
     	
 		StarTrekRegistry.registerItems();
 		StarTrekRegistry.registerBlocks();
 		StarTrekRecipes.initCraftingRecipes();
+		StarTrekRegistry.registerTileEntities();
 		
 		createDimensions();
+		
+		StarTrekRegistry.registerWorldGenerators();
 		
 		proxy.registerRenderThings();
 	}
@@ -116,7 +118,7 @@ public class StarTrekModBase
 		StarTrekBiomes.initBiomes();
 		StarTrekBiomes.registerBiomes();
 		
-		//StarTrekDimensions.registerDimensions();
+		StarTrekDimensions.registerDimensions();
 	}
 
 }

@@ -23,3 +23,4 @@ tile.ship_block_marked_back.name=Marked Ship Building Block Back
 tile.ship_block_window.name=Ship Building Block Window
 tile.Helm.name=Helm
 item.helm_panel.name=Helm Panel
+item.phaser.name=Hand Phaser

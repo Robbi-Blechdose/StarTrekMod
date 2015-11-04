@@ -1,15 +1,16 @@
 package StarTrekMod;
 
-import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import StarTrekMod.Block.BaseBlock;
 import StarTrekMod.Block.OreBlock;
 import StarTrekMod.Item.BaseItem;
 import StarTrekMod.Item.ProtectiveSuits;
 import StarTrekMod.Item.TShirts;
+import StarTrekMod.Item.Phaser.ItemPhaser;
 import StarTrekMod.Proxys.StarTrekCommonProxy;
 import StarTrekMod.TileEntity.Deflector.BlockDeflector3x3;
 import StarTrekMod.TileEntity.Helm.BlockHelm;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 
 public class StarTrekModInit
 {
@@ -39,15 +40,17 @@ public class StarTrekModInit
 		StarTrekModBase.dilithium_ore = new OreBlock(Material.rock).setHardness(2.0F).setBlockTextureName(Reference.MODID + ":dilithium_ore").setBlockName("dilithium_ore");
 		StarTrekModBase.dilithium_circuit = new BaseItem().setTextureName(Reference.MODID + ":dilithium_circuit").setUnlocalizedName("dilithium_circuit").setCreativeTab(startrektab);
 	
-		StarTrekModBase.Deflector3x3 = new BlockDeflector3x3().setBlockName("Deflector3x3").setHardness(1.2f);
+		StarTrekModBase.Deflector3x3 = new BlockDeflector3x3().setBlockName("Deflector3x3").setHardness(2.8f);
 		
-		StarTrekModBase.ship_block = new BaseBlock(Material.iron).setBlockTextureName(Reference.MODID + ":ship_block").setBlockName("ship_block").setHardness(2.0f);
-		StarTrekModBase.ship_block_marked = new BaseBlock(Material.iron).setBlockTextureName(Reference.MODID + ":ship_block_marked").setBlockName("ship_block_marked").setHardness(2.0f);
-		StarTrekModBase.ship_block_marked_front = new BaseBlock(Material.iron).setBlockTextureName("startrekmod:ship_block_marked_yellow").setBlockName("ship_block_marked_front").setHardness(2.0f);
-		StarTrekModBase.ship_block_marked_back = new BaseBlock(Material.iron).setBlockTextureName("startrekmod:ship_block_marked_end").setBlockName("ship_block_marked_back").setHardness(2.0f);
-		StarTrekModBase.ship_block_window = new BaseBlock(Material.iron).setBlockTextureName("startrekmod:ship_block_window").setBlockName("ship_block_window").setHardness(2.0f).setLightLevel(0.4f);
+		StarTrekModBase.ship_block = new BaseBlock(Material.iron).setBlockTextureName(Reference.MODID + ":ship_block").setBlockName("ship_block").setHardness(3.0f);
+		StarTrekModBase.ship_block_marked = new BaseBlock(Material.iron).setBlockTextureName(Reference.MODID + ":ship_block_marked").setBlockName("ship_block_marked").setHardness(3.0f);
+		StarTrekModBase.ship_block_marked_front = new BaseBlock(Material.iron).setBlockTextureName("startrekmod:ship_block_marked_yellow").setBlockName("ship_block_marked_front").setHardness(3.0f);
+		StarTrekModBase.ship_block_marked_back = new BaseBlock(Material.iron).setBlockTextureName("startrekmod:ship_block_marked_end").setBlockName("ship_block_marked_back").setHardness(3.0f);
+		StarTrekModBase.ship_block_window = new BaseBlock(Material.iron).setBlockTextureName("startrekmod:ship_block_window").setBlockName("ship_block_window").setHardness(3.0f).setLightLevel(0.4f);
 
 		StarTrekModBase.helm_panel = new BaseItem().setTextureName(Reference.MODID + ":helm_panel").setUnlocalizedName("helm_panel");
 		StarTrekModBase.helm = new BlockHelm().setBlockName("Helm").setHardness(1.0f);
+		
+		StarTrekModBase.phaser = new ItemPhaser().setUnlocalizedName("phaser");
 	}
 }
